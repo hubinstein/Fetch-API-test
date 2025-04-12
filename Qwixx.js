@@ -329,7 +329,7 @@ function penalize(){
   let penaltyAmount = penalizer.innerText.slice(-3);
   penaltyAmount=parseInt(penaltyAmount)-5;
   if (parseInt(penaltyAmount)===-20){
-    penalizer.innerText=`Penalty: -20`;
+    penalizer.innerText=`Penalty: -20`
     endGame();
     reset();
     removeListeners();
