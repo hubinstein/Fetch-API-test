@@ -181,9 +181,9 @@ function redChoiceMark() {
 
 }
 function yellowChoiceMark(){
-  mark('yellow', parseInt(dice.white.innerText)+parseInt(dice.white2.innerText));
-  removeListeners();
-  tutorial.innerText ='select a white die, take a penalty to roll, or if you have made a move, you can roll without penalty';
+  if (mark('yellow', parseInt(dice.white.innerText)+parseInt(dice.white2.innerText))!='failed'){
+    removeListeners();
+  }
 }
 function blueChoiceMark(){
   mark('blue', parseInt(dice.white.innerText)+parseInt(dice.white2.innerText))
@@ -305,20 +305,10 @@ function listenWhite(whiteThatDidIt){
     }
   }
 }
-/*function pressWhite() {
-  listenWhite('white');
-}
-function pressWhite2() {
-  listenWhite('white2');
-}*/
 let roller = document.getElementById('roller');
 roller.addEventListener('click', roll);
-dice.white.addEventListener('click', ()=>{
-  listenWhite('white');
-};
-dice.white2.addEventListener('click', ()=>{
-  listenWhite('white2');
-};);
+dice.white.addEventListener('click', ()=> {listenWhite('white');});
+dice.white2.addEventListener('click', () => {listenWhite('white2');});
 let penalizer=document.getElementById('penalty')
 penalizer.addEventListener('click', penalize)
 function endGame(){
@@ -344,6 +334,7 @@ function penalize(){
     reset();
     removeListeners();
     roll();
+
     return
   }
   reset();
