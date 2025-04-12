@@ -305,10 +305,16 @@ function listenWhite(whiteThatDidIt){
     }
   }
 }
+function pressWhite() {
+  listenWhite('white');
+}
+function pressWhite2() {
+  listenWhite('white2');
+}
 let roller = document.getElementById('roller');
 roller.addEventListener('click', roll);
-dice.white.addEventListener('click', function pressWhite() {listenWhite('white');});
-dice.white2.addEventListener('click',function pressWhite2() {listenWhite('white2');});
+dice.white.addEventListener('click', pressWhite);
+dice.white2.addEventListener('click', pressWhite2);
 let penalizer=document.getElementById('penalty')
 penalizer.addEventListener('click', penalize)
 function endGame(){
