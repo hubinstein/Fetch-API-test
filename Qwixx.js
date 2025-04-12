@@ -181,10 +181,9 @@ function redChoiceMark() {
 
 }
 function yellowChoiceMark(){
-  if (mark('yellow', parseInt(dice.white.innerText)+parseInt(dice.white2.innerText))!='failed'){
-    removeListeners();
-  }
-}
+  mark('yellow', parseInt(dice.white.innerText)+parseInt(dice.white2.innerText));
+  removeListeners();
+  tutorial.innerText ='select a white die, take a penalty to roll, or if you have made a move, you can roll without penalty';
 function blueChoiceMark(){
   mark('blue', parseInt(dice.white.innerText)+parseInt(dice.white2.innerText))
   removeListeners();
