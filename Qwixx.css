@@ -3,28 +3,24 @@
   }
 .red-row-end{
   background-color:rgb(255,0,0);
-  opacity:0.5;
 }
 .yellow-row{
   background-color:rgb(255,255,0);
 }
 .yellow-row-end{
   background-color:rgb(255,255,0);
-  opacity:0.5;
 }
 .green-row{
   background-color:rgb(0,255,0);
 }
 .green-row-end{
   background-color:rgb(0,255,0);
-  opacity:0.5;
 }
 .blue-row{
   background-color:rgb(0,0,255);
 }
 .blue-row-end{
   background-color:rgb(0,0,255);
-  opacity:0.5;
 }
 .red-row, .blue-row,.green-row, .red-row-end, .blue-row-end,.green-row-end, .red-die, .green-die, .blue-die, .roller, .penalty{
 color:rgb(255,255,255);
