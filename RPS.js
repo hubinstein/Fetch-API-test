@@ -4,7 +4,7 @@ document.getElementById('get').addEventListener('click', ()=>{
   fetch.then(data=>console.log(data.greeting));
 });
 document.getElementById('put').addEventListener('click', ()=>{fetch('https://hubinstein.github.io/Fetch-API-test/RPS.html/information', {
-  method:'PUT',
+  method:'POST',
   headers:{
     'Content-Type':'application/json'
   },
