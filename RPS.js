@@ -1,5 +1,8 @@
-
-document.getElementById('get').addEventListener('click', ()=>{console.log(fetch('https://hubinstein.github.io/Fetch-API-test/RPS.html/information').json());});
+document.getElementById('get').addEventListener('click', ()=>{
+  let fetch = fetch('https://hubinstein.github.io/Fetch-API-test/RPS.html/information'); 
+  fetch.then(res=>res.json()); 
+  fetch.then(data=>console.log(data.greeting));
+});
 document.getElementById('put').addEventListener('click', ()=>{fetch('https://hubinstein.github.io/Fetch-API-test/RPS.html/information', {
   method:'PUT',
   headers:{
